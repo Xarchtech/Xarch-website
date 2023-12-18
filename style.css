@@ -1,82 +1,164 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
     margin: 0;
     padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
 }
 
-::selection{
-    background-color: #b4d2ff;
+.container {
+    display: flex;
+    width: 100%;
 }
 
-header {
+.left-section,
+.right-section {
+    flex: 1;
     text-align: center;
-    padding: 70px 0;
-    background-color: #fff;
+    padding: 20px;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 100%;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-l {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content-r {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 115px;
+    margin-right: 350px;
+    pointer-events: none;
+    user-select: none;
+    
+}
+.brand{
+    font-size: 50px;
+    color: white;
+    font-family: 'Archivo Black';
+    margin-bottom: 0px;
+    margin-right: 180px;
+    margin-top: -45px;
     pointer-events: none;
     user-select: none;
 }
 
-.logo {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 150px;
-    color: #0059dc;
-    margin: 0;
+
+h1.brand-name {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.container {
-    text-align: center;
-    margin: 20px;
+h1.soon-banner{
+    margin-top: 5px;
+    font-size: 55px;
+    font-family: 'Poppins';
 }
 
-.engaging-text {
-    color: black;
-    font-size: 1.2em;
-    line-height: 1.6;
-    border-radius: 10px;
-    border: 2px solid #0059dc;
-    padding: 20px;
-}
-
-
-.status {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    font-family: 'poppins';
-    font-size: 40px;
+#countdown {
+    font-size: 60px;
     font-weight: bold;
+    color: #000000;
+    font-family: 'Poppins';
+    user-select: none;
 }
 
-p {
-    color: #555;
+.footer {
+    margin-top: 110px;
 }
 
-.social-links {
-    margin-top: 20px;
+.footer a {
+    margin-right: 15px; /* Adjust the spacing between icons */
+    user-select: none;
 }
 
-.social-icon {
-    margin: 0 10px;
+.footer img {
+    width: 30px; /* Adjust the size of the social media icons */
+    height: auto;
+    user-select: none;
 }
 
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 600px) {
-    .logo {
-        font-size: 2.5em;
+.text-content {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    text-align: left;
+    line-height: 1.5;
+    font-size: 25px;
+    letter-spacing: 1px;
+    max-width: 600px;
+    margin-left: 40px;
+}
+
+/* Add a media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
 
-    .engaging-text {
-        font-size: 1em;
-        padding: 15px;
+    .left-section,
+    .right-section {
+        width: 100%;
     }
 
-    .status {
-        font-size: 1.2em;
-        padding: 8px 15px;
+    h1.soon-banner{
+        margin-top: 5px;
+        font-size: 55px;
+        font-family: 'Poppins';
+        color: white;
     }
-}
-.social-icon img {
-    width: 30px;
-    height: 30px;
+
+    .video-background {
+        width: 100%;
+    }
+
+    .logo img {
+        margin-right: 0; /* Adjust margin for smaller screens */
+    }
+
+    .brand {
+        margin-right: 0;
+        color: #ffffff; /* Set text color to white for better readability on dark background */
+    }
+
+    .text-content {
+        margin-left: 0;
+        text-align: center;
+        max-width: 550px;
+        color: #000000; /* Set text color to white for better readability on dark background */
+    }
+
+    .footer {
+        margin-top: 20px;
+    }
 }
