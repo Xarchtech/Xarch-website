@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Set the date we're counting down to (replace with your desired launch date)
-    const launchDate = new Date('January 01, 2025 00:00:00').getTime();
+    const launchDate = new Date('September 18, 2024 00:00:00').getTime();
 
     // Update the countdown every 1 second
     const countdownInterval = setInterval(function () {
